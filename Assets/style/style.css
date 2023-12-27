@@ -1,0 +1,261 @@
+/*------------------google-fonts--------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.closebtn {
+  display: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 72px;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+#pills-tab li {
+  width: 50%;
+}
+
+#pills-tab li button {
+  width: 100%;
+  padding: 16px 24px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+/* Add your styles for mega menu, tabs, and dropdowns here */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggle-bar {
+  width: 25px;
+  height: 2px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+.close .toggle-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.close .toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.close .toggle-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.tab-content {
+  display: block;
+}
+
+.overlay-effect {
+  position: fixed;
+  top: calc(72px);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: none;
+  z-index: 0;
+}
+
+.overlay-visible {
+  display: block;
+}
+
+.tabs-section .accordion-item button {
+  flex-direction: row;
+}
+
+.tabs-section .nav-pills .nav-link.active {
+  border-bottom: 2px solid rgb(33, 39, 33);
+  border-radius: 0;
+  background-color: rgb(250, 250, 250);
+  color: #000;
+  font-weight: 700;
+}
+.tabs-section .nav-pills .nav-link {
+  color: rgb(117, 119, 121);
+}
+
+.animation-scroll {
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -4px;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  transition: transform 0.6s ease-in-out;
+}
+
+.animation-sec {
+  background-color: #54c79b;
+  padding: 70px 0px;
+  overflow: hidden;
+}
+
+.marquee-section {
+  background: url("../Images/6294a43be865830efcba9b11_runline-logos.svg")
+    no-repeat;
+  background-size: 100% 100%;
+  background-repeat: repeat-x;
+  transition: 120s linear;
+  animation: marquee 30s infinite linear;
+  position: relative;
+}
+
+.inside-circle {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.inside-circle img:nth-child(2) {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+footer {
+  position: relative;
+  color: #fff;
+  padding: 120px 0 80px;
+  background-color: #54c79b;
+}
+
+.new-layer {
+  position: absolute;
+  background-color: #080808;
+  left: 0;
+  top: 20px;
+  bottom: 0;
+  right: 15%;
+  z-index: 0;
+  width: 87%;
+  border-radius: 0 2rem 0 0;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+}
+
+.inside-foot-con ul li a {
+  color: #fff;
+}
+.inside-foot-con h6 {
+  font-size: 20px;
+  color: #9f9f9f;
+}
+.logo-div img {
+  max-width: 200px;
+  margin: 10px 0px;
+}
+h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 30px;
+}
+@keyframes marquee {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: -1190px;
+  }
+}
